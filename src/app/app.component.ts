@@ -5,21 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'FizzBuzz';
-  fbg = '';
-
-  constructor() { }
-
-  ngOnInit(): void {
-    this.fbg=this.FizzBuzzGameArray([3, 5], ['Fizz', 'Buzz']);
-  }
 
   Mod(divisor: number, dividing: number){
     return divisor%dividing
   }
 
-  FizzBuzz(number: number[], text: string[], count: number):string {
+  FizzBuzz(number: number[], text: string[], count: number): string {
     let result:string;
     result = '';
     for(let i=0; i< number.length;i++){
